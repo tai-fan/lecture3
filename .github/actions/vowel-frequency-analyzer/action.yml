@@ -1,0 +1,13 @@
+name: "Vowel Frequency Analyzer"
+description: "Counts vowels and updates README"
+
+inputs:
+  file:
+    description: 'Text file to process'
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  entrypoint: "/bin/bash"
+  args: ["./github/scripts/entrypoint.sh"]
